@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Volitelné vlastní styly */
+body {
+  font-family: Arial, sans-serif;
+}
