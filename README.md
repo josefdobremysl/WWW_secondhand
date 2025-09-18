@@ -105,3 +105,6 @@ git commit -m "Initial commit"
 git remote add origin https://github.com/josefdobremysl/WWW_secondhand.git
 git branch -M main
 git push -u origin main
+
+<img width="1862" height="967" alt="obrazek" src="https://github.com/user-attachments/assets/4f4ba9e3-001e-4f00-b0e1-039a7c5bf843" />
+
