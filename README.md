@@ -1,142 +1,107 @@
-\# WWW Secondhand
+# WWW Secondhand
 
+## Description
 
+This project is a web application for comparison of secondhand e-shops.
 
-\## Description
+The backend is built with **FastAPI** and the frontend with **React** (using TailwindCSS for styling).
 
-This project is a web application for comparison of secondhand e-shops.  
+Users can search for items on Vinted, save searches as dynamic buttons, and view results in a responsive grid.
 
-The backend is built with \*\*FastAPI\*\* and the frontend with \*\*React\*\*.
+---
 
+## Project Structure
 
-
-\## Project Structure
-
-```
-
-my\_project/
-
+my_project/
 │
-
-├── backend/          # Python backend (FastAPI)
-
-│   ├── main.py       # Main backend file
-
-│   ├── venv/         # Python virtual environment (ignored in git)
-
-│   └── ...           
-
+├── backend/ # Python backend (FastAPI)
+│ ├── main.py # Main backend file
+│ ├── venv/ # Python virtual environment (ignored in git)
+│ └── ...
 │
-
-├── frontend/         # React frontend
-
-│   ├── src/
-
-│   ├── public/
-
-│   ├── package.json
-
-│   └── ...           
-
+├── frontend/ # React frontend
+│ ├── src/
+│ ├── public/
+│ ├── package.json
+│ └── ...
 │
-
-└── .gitignore        # Files ignored by git
-
-```
+└── .gitignore # Files ignored by git
 
 
+---
 
-\## Installation and Running
+## Installation and Running
 
+### Backend
 
-
-\### Backend
-
-1\. Navigate to the `backend` folder:
+1. Navigate to the backend folder:
 
 ```bash
-
 cd backend
 
-```
-
-2\. Create and activate a virtual environment:
-
-```bash
+    Create and activate a virtual environment:
 
 python -m venv venv
 
-\# Windows PowerShell
+# Windows PowerShell
+.\venv\Scripts\Activate.ps1
 
-.\\venv\\Scripts\\Activate.ps1
+    Install dependencies:
 
-```
+pip install fastapi uvicorn pydantic pyVinted python-dotenv
 
-3\. Install dependencies:
-
-```bash
-
-pip install fastapi uvicorn pydantic
-
-```
-
-4\. Run the backend:
-
-```bash
+    Run the backend:
 
 uvicorn main:app --reload --port 8000
 
-```
+Frontend
 
-
-
-\### Frontend
-
-1\. Navigate to the `frontend` folder:
-
-```bash
+    Navigate to the frontend folder:
 
 cd frontend
 
-```
-
-2\. Install dependencies:
-
-```bash
+    Install dependencies:
 
 npm install
 
-```
-
-3\. Run the frontend:
-
-```bash
+    Run the frontend:
 
 npm start
 
-```
+The frontend will run at http://localhost:3000
+and communicate with the backend at http://localhost:8000
 
-The frontend will run at `http://localhost:3000` and communicate with the backend at `http://localhost:8000`.
-
-
-
-\## Features
-
-\- Add agents through the \*\*Create\*\* page
-
-\- Dynamic buttons on the main page
-
-\- Responsive design using TailwindCSS
-
-\- Basic navigation between pages
+.
 
 
+Notes
 
-\## Notes
+    Backend uses CORS to communicate with the frontend
 
-\- Backend uses CORS to communicate with the frontend
+    Virtual environment (venv) and node_modules are ignored in the repository
 
-\- Virtual environment and `node\_modules` are ignored in the repository
+    Vinted searches use the pyVinted
 
+    library
 
+Uploading to GitHub
 
+    Initialize Git in your project folder:
+
+git init
+
+    Add all files (except those in .gitignore):
+
+git add .
+
+    Commit your changes:
+
+git commit -m "Initial commit"
+
+    Create a repository on GitHub (e.g., WWW_secondhand) and copy its URL.
+
+    Link your local repo to GitHub:
+
+git remote add origin https://github.com/josefdobremysl/WWW_secondhand.git
+git branch -M main
+git push -u origin main
